@@ -1,7 +1,6 @@
 package br.com.lucasveras.lvmeta.models;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +21,7 @@ public class Sale {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private UUID id;
+	private Long id;
 	
 	private String sellerName;
 	private Integer visited;
