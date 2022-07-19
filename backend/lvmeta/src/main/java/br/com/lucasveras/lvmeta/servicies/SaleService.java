@@ -1,8 +1,8 @@
 package br.com.lucasveras.lvmeta.servicies;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import br.com.lucasveras.lvmeta.models.Sale;
@@ -21,7 +21,7 @@ public class SaleService {
 	private SaleRepository saleRepository;
 	
 	// Buscar Vendas
-	public List<Sale> findSale() {	
-		return saleRepository.findAll();
+	public Page<Sale> findSale(Pageable pageable) {	
+		return saleRepository.findAll(pageable);
 	}
 }
